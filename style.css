@@ -1,0 +1,308 @@
+/* Allgemeine Layout- und Schriftstil-Einstellungen */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FAF3E0; /* Warmer Hintergrundton */
+    margin: 0;
+    color: #333;
+    padding-bottom: 40px; /* Fügt unten Platz hinzu */
+
+}
+
+
+
+/* Header und Navbar */
+header {
+    background-color: #D35400; /* Warme Orangetöne für mehr Aufmerksamkeit */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #F39C12; /* Helleres Gelb für Hover-Effekt */
+}
+
+/* Für die Hauptüberschrift */
+.title {
+    font-size: 230%;  /* Größere Schriftgröße für mehr Wirkung */
+    text-align: center;  /* Zentriert die Überschrift */
+    color: #ff6400;  /* Die gleiche warme Farbe */
+    font-family: 'Montserrat', sans-serif;  /* Eine moderne, elegante Schriftart */
+    margin-top: 50px;  /* Etwas Abstand nach oben */
+    font-weight: 700;  /* Sehr fett für mehr Präsenz */
+    /*letter-spacing: 2px;  /* Leichter Abstand zwischen den Buchstaben */
+    text-transform: uppercase;  /* Alle Buchstaben in Großbuchstaben für mehr Ausdruck */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);  /* Schattierung für Tiefe */
+}
+
+
+
+.subtitle {
+    font-size: 40px;
+    margin: 50px 0;
+    color: #2980B9; /* Blau für Kontrast */
+    text-align: center;
+}
+
+/* Bilder */
+img {
+    max-width: 22%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(1, 1, 1, 1); /* Verstärkter Schatten für mehr Tiefe */
+    margin-bottom: 80px;
+}
+
+
+
+
+/* Header und Navbar */
+header {
+    background-color: #D35400; /* Warmer Orangeton */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+header a:hover {
+    color: #F39C12;
+    transform: scale(1.1);
+}
+/* Für die Gerichtsnamen */
+.dish h3 {
+    text-align: center;  /* Zentriert die Namen der Gerichte */
+    font-size: 1.8rem;  /* Etwas kleinere Schriftgröße als die Hauptüberschrift */
+    color: #2a4d5d;  /* Die gleiche warme Farbe wie bei der Hauptüberschrift */
+    font-family: 'Montserrat', sans-serif;  /* Gleiche moderne Schriftart */
+    font-weight: 600;  /* Etwas weniger fett als die Hauptüberschrift, aber immer noch stark */
+    margin-bottom: 10px;  /* Abstand nach unten für eine bessere Struktur */
+}
+
+.dessert h3 {
+    text-align: center;  /* Zentriert die Namen der Gerichte */
+    font-size: 1.8rem;  /* Etwas kleinere Schriftgröße als die Hauptüberschrift */
+    color: #e60060;  /* Die gleiche warme Farbe wie bei der Hauptüberschrift */
+    font-family: 'Montserrat', sans-serif;  /* Gleiche moderne Schriftart */
+    font-weight: 600;  /* Etwas weniger fett als die Hauptüberschrift, aber immer noch stark */
+    margin-bottom: 10px;  /* Abstand nach unten für eine bessere Struktur */
+}
+
+.dish p {
+    text-align: center;  /* Zentriert die Namen der Gerichte */
+    color: black;
+    font-family: 'Calibri', sans-serif;
+}
+
+.dessert  {
+     text-align: center;  /* Zentriert die Namen der Gerichte */
+     color: black;
+     font-family: 'Calibri', sans-serif;
+ }
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #2c3e50;
+    padding: 15px 0;
+}
+
+.nav-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('pics/stock.jpg'); /* Hier kannst du dein Hero-Bild einfügen */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+.cta-button {
+    background-color: #f39c12;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+}
+
+/* Highlights Section */
+.highlights {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.highlight-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.highlight-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+}
+
+.highlight-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.highlight-card h3 {
+    font-size: 24px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.highlight-card p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #7f8c8d;
+}
+
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: relative; /* Standard, damit es gut mit dem Layout harmoniert */
+    width: 100%;
+    margin-top: auto; /* Verschiebt den Footer automatisch ans Ende */
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.contact-section {
+    background: #ffffff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e67e22;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info {
+    font-size: 16px;
+    color: #7f8c8d;
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info strong {
+    color: #2c3e50;
+}
+
+.contact-info p:hover {
+    color: #e67e22;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
