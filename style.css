@@ -1,53 +1,15 @@
 /* Allgemeine Layout- und Schriftstil-Einstellungen */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #FAF3E0; /* Warmer Hintergrundton */
+    background-color: #f4f4f4; /* Warmer Hintergrundton */
     margin: 0;
-    color: #333;
-    padding-bottom: 40px; /* Fügt unten Platz hinzu */
+    padding: 0;
 
 }
 
 
 
-/* Header und Navbar */
-header {
-    background-color: #D35400; /* Warme Orangetöne für mehr Aufmerksamkeit */
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    margin: 0 25px;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-header a:hover {
-    color: #F39C12; /* Helleres Gelb für Hover-Effekt */
-}
-
-/* Für die Hauptüberschrift */
-.title {
-    font-size: 230%;  /* Größere Schriftgröße für mehr Wirkung */
-    text-align: center;  /* Zentriert die Überschrift */
-    color: #ff6400;  /* Die gleiche warme Farbe */
-    font-family: 'Montserrat', sans-serif;  /* Eine moderne, elegante Schriftart */
-    margin-top: 50px;  /* Etwas Abstand nach oben */
-    font-weight: 700;  /* Sehr fett für mehr Präsenz */
-    /*letter-spacing: 2px;  /* Leichter Abstand zwischen den Buchstaben */
-    text-transform: uppercase;  /* Alle Buchstaben in Großbuchstaben für mehr Ausdruck */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);  /* Schattierung für Tiefe */
-}
-
-
-
+/* Gerichte.html */
 .subtitle {
     font-size: 40px;
     margin: 50px 0;
@@ -66,36 +28,13 @@ img {
     margin-bottom: 80px;
 }
 
+.img:hover {
+    box-shadow: 0 10px 15px rgba(1, 1, 1, 1);
 
-
-
-/* Header und Navbar */
-header {
-    background-color: #D35400; /* Warmer Orangeton */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
-header a {
-    color: white;
-    text-decoration: none;
-    margin: 0 25px;
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-}
 
-header a:hover {
-    color: #F39C12;
-    transform: scale(1.1);
-}
+
 /* Für die Gerichtsnamen */
 .dish h3 {
     text-align: center;  /* Zentriert die Namen der Gerichte */
@@ -127,76 +66,350 @@ header a:hover {
      font-family: 'Calibri', sans-serif;
  }
 
-body {
+.title {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    color: #FF6347; /* Rot für einen kräftigen Akzent */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* sanfter Schatten */
+    letter-spacing: 1px;
 }
 
-/* Navbar */
+/* Galerie-Bilder */
+.gallery {
+    display: flex; /* Setzt die Galerie-Bilder in eine Flexbox für einfachere Anordnung */
+    justify-content: center; /* Zentriert die Bilder horizontal */
+    align-items: center; /* Zentriert die Bilder vertikal (falls nötig) */
+    flex-wrap: wrap; /* Ermöglicht, dass die Bilder in mehreren Zeilen angezeigt werden */
+    gap: 20px; /* Fügt einen Abstand von 20px zwischen den Bildern hinzu */
+    margin: 0 auto; /* Zentriert die gesamte Galerie auf der Seite */
+    width: 100%; /* Die Galerie nimmt die gesamte Breite ihres Containers ein */
+    max-width: 1200px; /* Begrenzung der maximalen Breite der Galerie */
+    padding: 20px 0; /* Fügt oben und unten einen Abstand von 20px hinzu */
+    box-sizing: border-box; /* Bezieht das Padding in die Breite und Höhe mit ein */
+}
+
+.gallery img {
+    display: block; /* Entfernt die Standard-Inline-Eigenschaften von Bildern */
+    margin: auto; /* Zentriert die Bilder innerhalb ihres Containers */
+    width: 50%; /* Setzt die Breite der Bilder auf 50% des Containers */
+    height: auto; /* Passt die Höhe automatisch an, um das Seitenverhältnis beizubehalten */
+    cursor: pointer; /* Ändert den Mauszeiger in einen Zeiger bei Hover */
+    border: 2px solid #ccc; /* Fügt einen grauen Rand um die Bilder hinzu */
+    border-radius: 8px; /* Macht die Ecken der Bilder leicht abgerundet */
+    transition: transform 0.3s ease; /* Animiert Skalierungen, um sie weicher erscheinen zu lassen */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Vergrößert das Bild leicht, wenn die Maus darüber schwebt */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Das Modal ist standardmäßig ausgeblendet */
+    position: fixed; /* Das Modal bleibt immer an der gleichen Position */
+    z-index: 1000; /* Legt sicher, dass das Modal vor allen anderen Elementen liegt */
+    top: 0; /* Setzt das Modal an den oberen Rand */
+    left: 0; /* Setzt das Modal an den linken Rand */
+    width: 100%; /* Das Modal nimmt die volle Breite des Fensters ein */
+    height: 100%; /* Das Modal nimmt die volle Höhe des Fensters ein */
+    background-color: rgba(0, 0, 0, 0.8); /* Ein halbtransparent schwarzer Hintergrund */
+    justify-content: center; /* Zentriert den Inhalt des Modals horizontal */
+    align-items: center; /* Zentriert den Inhalt des Modals vertikal */
+}
+
+.modal-content {
+    min-width: 800px; /* Legt eine Mindestbreite für den Inhalt des Modals fest */
+    border-radius: 10px; /* Macht die Ecken des Modals leicht abgerundet */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Fügt einen Schatten hinzu, um das Modal hervorzuheben */
+}
+
+/* Schließen-Button */
+.close-modal {
+    position: absolute; /* Positioniert den Button unabhängig vom normalen Layout */
+    top: 10px; /* Setzt den Button 10px vom oberen Rand des Modals entfernt */
+    right: 20px; /* Setzt den Button 20px vom rechten Rand des Modals entfernt */
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+/* Allgemeine Navbar-Stile */
 .navbar {
+    position: fixed; /* Macht die Navbar fixiert */
+    top: 0; /* Positioniert sie oben */
+    left: 0;
+    width: 100%; /* Nimmt die gesamte Bildschirmbreite ein */
+    display: flex; /* Flexbox, um die Items nebeneinander anzuzeigen */
+    justify-content: center; /* Zentriert die Links horizontal */
+    align-items: center; /* Zentriert die Links vertikal */
+    padding: 10px 20px; /* Etwas Abstand um die Links */
+    background-color: rgba(2, 2, 2, 0.62); /* Durchsichtiger Hintergrund */
+    transition: background-color 0.3s, padding 0.3s; /* Sanfte Übergänge für den Hintergrund und das Padding */
+    z-index: 1000; /* Damit die Navbar immer oben ist */
+}
+
+/* Dass alle Elemente nebeneinander sind*/
+.navbar ul {
     display: flex;
-    justify-content: center;
-    background-color: #2c3e50;
-    padding: 15px 0;
+    justify-content: space-between;
+    list-style: none;
 }
 
-.nav-link {
-    color: #ecf0f1;
-    text-decoration: none;
-    margin: 0 25px;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
+/* Navbar Links */
+.navbar a {
+    position: relative;
+    color: white; /* Weiße Schriftfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+    font-size: 22px; /* Textgröße */
+    margin: 0 15px; /* Abstand zwischen den Links */
+    padding: 10px 15px; /* Polsterung für bessere Klickbarkeit */
+    transition: transform 0.3s, color 0.3s; /* Sanfte Übergänge */
 }
 
-.nav-link:hover {
-    color: #f39c12;
+
+/* Hover-Effekt auf die Links */
+.navbar a:hover {
+    color: #f39c12; /* Ändert die Farbe beim Hover */
+    transform: scale(1.1); /* Vergrößert den Link leicht */
 }
+
+/* Hintergrundfarbe der Navbar beim Scrollen */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.88); /* Dunklerer Hintergrund */
+    padding: 10px 50px; /* Mehr Padding, wenn die Navbar gescrollt wird */
+}
+
+/* Navbar Logo */
+.navbar .logo a {
+    font-size: 24px; /* Größere Schrift für das Logo */
+    font-weight: bold;
+    color: white; /* Weiße Schriftfarbe */
+}
+
+/* Wenn die Seite gescrollt wird */
+body.scrolled .navbar {
+    background-color: rgba(0, 0, 0, 0.88); /* Dunklerer Hintergrund beim Scrollen */
+    padding: 10px 50px; /* Mehr Padding */
+}
+
+/* Der Strich unter dem Link */
+.navbar a::after { /* Pseudoelement für den Strich */
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Höhe des Strichs */
+    background-color: #007bff; /* Farbe des Strichs */
+    transition: width 0.3s ease; /* Sanfte Animation */
+}
+
+.navbar a:hover::after {
+    width: 100%; /* Der Strich wächst beim Hover */
+    transform: scale(1.1); /* Vergrößert den Link leicht */
+}
+
 
 /* Hero Section */
 .hero {
-    background-image: url('pics/stock.jpg'); /* Hier kannst du dein Hero-Bild einfügen */
+    background-image: url('pics/stock.jpg');
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 5);
     text-align: center;
     padding: 0 20px;
+    flex-direction: column;
+    gap: 20px; /* Abstand zwischen Text und Button */
 }
 
-.hero-content h1 {
-    font-size: 48px;
+.hero-gerichte {
+    background-image: url('pics/gerichte.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 5);
+    text-align: center;
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 20px; /* Abstand zwischen Text und Button */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Abstand zwischen Text und Button */
+}
+
+
+
+
+
+/* Regionen.html */
+.heroRegionen {
+    background-image: url('pics/tuerkischekuechetitel.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 5);
+    text-align: center;
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 20px; /* Abstand zwischen Text und Button */
+}
+
+
+/* Container für die Regionen */
+.regionen-section {
+    display: flex; /* Flexbox für eine flexible Anordnung */
+    flex-wrap: wrap; /* Zeilenumbruch bei Überschreitung */
+    gap: 30px; /* Abstand zwischen den Region-Boxen */
+    justify-content: center; /* Zentriert die Elemente in der Zeile */
+    padding: 20px; /* Abstand zum Rand */
+}
+
+/* Jede einzelne Region */
+.region {
+    width: 300px; /* Breite der Region */
+    height: 250px; /* Höhe der Region */
+    background-color: #f0f0f0; /* Hintergrundfarbe der Region */
+    border-radius: 12px; /* Abgerundete Ecken */
+    position: relative; /* Für absolute Positionierung der Vorder- und Rückseite */
+    cursor: pointer; /* Zeigt den Hand-Cursor, wenn der Benutzer drüber fährt */
+    transform-style: preserve-3d; /* Wichtig für den 3D-Flip-Effekt */
+    transition: transform 0.6s; /* Dauer für die Dreh-Animation */
+    flex: 1 1 300px; /* Flexibles Layout mit maximaler Breite von 300px */
+    max-width: 300px; /* Maximalbreite auf 300px begrenzen */
+    margin-bottom: 20px; /* Abstand zum unteren Rand */
+}
+
+/* Vorderseite der Region */
+.region-front,
+.region-back {
+    position: absolute; /* Positioniert die Vorder- und Rückseite */
+    width: 100%; /* Deckt die komplette Breite ab */
+    height: 100%; /* Deckt die komplette Höhe ab */
+    backface-visibility: hidden; /* Verhindert das Sichtbarwerden der Rückseite beim Drehen */
+}
+
+/* Stil für die Vorderseite */
+.region-front {
+    display: flex; /* Flexbox, um Inhalte zu zentrieren */
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center; /* Zentriert vertikal */
+    background-color: #f0f0f0; /* Hintergrundfarbe */
+    transition: transform 0.4s, opacity 0.4s; /* Übergang für Bewegungen und Sichtbarkeit */
+    overflow: hidden; /* Verhindert, dass Inhalte über den Rand hinausragen */
+}
+
+/* Titel auf der Vorderseite */
+.region-title {
+    opacity: 0; /* Anfangs unsichtbar */
+    font-size: 1.5rem; /* Schriftgröße */
+    font-weight: bold; /* Fettschrift */
+    color: #333; /* Textfarbe */
+    transition: opacity 0.3s ease; /* Übergang für die Sichtbarkeit */
+}
+
+/* Wenn der Benutzer über die Vorderseite hovert, wird der Titel sichtbar */
+.region:hover .region-title {
+    opacity: 1; /* Titel wird sichtbar */
+}
+
+/* Rückseite der Region */
+.region-back {
+    transform: rotateY(180deg); /* Dreht die Rückseite um 180 Grad */
+    display: flex; /* Flexbox für die Anordnung der Elemente auf der Rückseite */
+    flex-direction: column; /* Vertikale Anordnung der Inhalte */
+    justify-content: center; /* Zentriert vertikal */
+    align-items: center; /* Zentriert horizontal */
+    text-align: center; /* Zentrierter Text */
+    padding: 15px; /* Abstand zum Rand */
+    background-color: #fff; /* Hintergrundfarbe */
+    box-sizing: border-box; /* Verhindert das Überschreiten der Box durch Padding */
+}
+
+/* Wenn der Benutzer über die Vorderseite hovert, wird die Rückseite sichtbar */
+.region:hover .region-front {
+    opacity: 1; /* Vorderseite bleibt sichtbar */
+    transform: translateX(20px); /* Leichte Bewegung nach rechts */
+}
+
+/* Rückseite sichtbar machen beim Hover */
+.region:hover .region-back {
+    opacity: 1;
+}
+
+/* Wenn auf die Region geklickt wird, wird sie umgedreht */
+.region.flipped {
+    transform: rotateY(180deg); /* Flippt die Region um 180 Grad */
+}
+
+/* Bild auf der Rückseite */
+.region-back img {
+    max-width: 150px; /* Bildbreite auf 80% der Rückseite setzen */
+    border-radius: 8px; /* Abgerundete Ecken des Bildes */
+}
+
+
+
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter schwarzer Hintergrund */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block; /* Verhindert, dass es die volle Breite einnimmt */
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin: 0 0 15px;
+}
+
+.hero-text p {
+    font-size: 1.8rem;
     margin: 0;
-    font-weight: bold;
-}
-
-.hero-content p {
-    font-size: 18px;
-    margin: 10px 0;
-    font-weight: 300;
 }
 
 .cta-button {
-    background-color: #f39c12;
-    color: white;
+    margin-top: 4rem;
+    padding: 20px 40px;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #d35400;
+    border: none;
+    border-radius: 1rem;
     text-decoration: none;
-    padding: 12px 24px;
-    font-size: 18px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .cta-button:hover {
+    transform: scale(1.05);
     background-color: #e67e22;
 }
 
+/* Index.html */
 /* Highlights Section */
 .highlights {
     padding: 50px 20px;
@@ -212,39 +425,50 @@ body {
 
 .highlight-cards {
     display: flex;
-    justify-content: space-around;
-    gap: 30px;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start; /* Startet die Inhalte oben */
 }
 
 .highlight-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 280px;
-    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .highlight-card img {
-    width: 100%;
+    max-width: 100%;
+    height: 200px;
     border-radius: 8px;
+    object-fit: cover; /* Verhindert Verzerrungen */
+    margin-bottom: 15px;
 }
 
 .highlight-card h3 {
-    font-size: 24px;
-    margin-top: 15px;
-    font-weight: 600;
+    margin: 10px 0;
+    font-size: 2rem;
 }
 
-.highlight-card p {
-    font-size: 16px;
-    margin-top: 10px;
-    color: #7f8c8d;
+.highlight-card li {
+    font-size: 0.9rem;
+    color: #666;
 }
 
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
 footer {
-    background-color: #2c3e50;
+    background-color: rgba(0, 0, 0, 0.88);
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -255,54 +479,121 @@ footer {
 }
 
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+
+/* Kontakt.html */
+.heroKontakt {
+    background-image: url('pics/kontakt.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 5);
+    text-align: center;
+    padding: 0 20px;
 }
 
 .contact-section {
     background: #ffffff;
-    padding: 40px 20px;
+    padding: 100px 70px;
     margin: 20px auto;
-    border-radius: 10px;
-    max-width: 600px;
+    border-radius: 1rem;
+    max-width: 800px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .contact-section h1 {
-    font-size: 28px;
+    font-size: 30px;
     color: #2c3e50;
-    margin-bottom: 20px;
     border-bottom: 2px solid #e67e22;
     display: inline-block;
-    padding-bottom: 5px;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .contact-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
 }
 
 .contact-info {
-    font-size: 16px;
+    font-size: 24px;
     color: #7f8c8d;
-    text-align: left;
+    text-align: center;
 }
 
-.contact-info p {
-    margin: 5px 0;
-}
 
 .contact-info strong {
     color: #2c3e50;
 }
 
-.contact-info p:hover {
-    color: #e67e22;
+.contact-info p:hover{
     cursor: pointer;
-    transition: color 0.3s ease;
 }
+
+.contact-info {
+    line-height: 1.8;
+    max-width: 600px;
+    font-size: 20px;
+    color: #7f8c8d;
+    text-align: center;
+}
+
+
+.copy {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Google Maps Location */
+.maps-location {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.maps-location iframe {
+    width: 750px;
+    max-width: 600px;
+    height: 400px;
+    border: 0;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.social-links {
+    display: block; /* Flexbox aktivieren */
+    justify-content: center; /* Zentriert die Icons */
+    text-align: center;
+}
+
+.social-links a {
+    display: inline-block; /* Stellt sicher, dass der Link als Block angezeigt wird */
+    max-width: 85px; /* Breite des Bildes */
+    max-height: 85px; /* Höhe des Bildes */
+    margin: 30px;
+}
+
+.social-links img {
+    max-width: 85px; /* Die Bilder passen sich der Größe des Elternelements an */
+    height: 85px; /* Die Höhe des Bildes wird ebenfalls angepasst */
+    object-fit: contain; /* Verhindert Verzerrung */
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+.social-links h2 {
+    font-size: 1.8em;
+}
+

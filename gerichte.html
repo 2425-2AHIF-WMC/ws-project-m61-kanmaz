@@ -5,145 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerichte der türkischen Küche</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ03Ruqb4V7h0p5p1b8dbh52dyfoMmcD34c5qT0ywz5joX6f6eScnXkp7tWV" crossorigin="anonymous">
 </head>
 <body>
 <header>
-    <a href="index.html">Startseite</a>
-    <a href="regionen.html">Regionen</a>
-    <a href="gerichte.html">Gerichte</a>
-    <a href="kontakt.html">Kontakt</a>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Startseite</a>
+        <a href="regionen.html" class="nav-link">Regionen</a>
+        <a href="gerichte.html" class="nav-link">Gerichte</a>
+        <a href="kontakt.html" class="nav-link">Kontakt</a>
+    </nav>
 </header>
 
-<h1 class="title">Türkische Gerichte - Hauptspeisen und Nachspeisen</h1>
 
+<section class="hero-gerichte">
+    <div class="hero-text">
+        <h1>Die Aromen der türkischen Küche</h1>
+        <p>Entdecke die Vielfalt an traditionellen Gerichten und erlebe den Geschmack der Türkei.</p>
+    </div>
+</section>
+
+
+<br>
+<h1 class="title">Türkische Gerichte - Hauptspeisen und Nachspeisen</h1>
 <h2 class="subtitle">Hauptspeisen</h2>
 
-<div class="dish">
-    <h3>Adana Kebab</h3>
-    <p>Ein würziger Kebab aus Adana, hergestellt aus gehacktem Lammfleisch und Gemüse, das auf einem Spieß gegrillt wird. Ein perfektes Gericht für Fleischliebhaber.</p>
-    <img src="pics/adanaKebap.jpg" alt="Adana Kebab">
-</div>
+<section class="gallery">
+    <div id="modal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img id="modal-img" class="modal-content" alt="Großes Bild">
+    </div>
+    <div class="dish">
+        <h3>Adana Kebab</h3>
+        <p>Ein würziger Kebab aus Adana, hergestellt aus gehacktem Lammfleisch und Gemüse, das auf einem Spieß gegrillt wird. Ein perfektes Gericht für Fleischliebhaber.</p>
+        <img src="pics/adanaKebap.jpg" alt="Kebap" onclick="openModal(this)">
+    </div>
 
-<div class="dish">
-    <h3>Iskender Kebab</h3>
-    <p>Zarte Fleischscheiben, serviert mit Joghurt und Tomatensoße auf einem flachen Brot, übergossen mit heißer Butter. Sehr beliebt in Bursa.</p>
-    <img src="pics/iskenderKebap.jpeg" alt="Iskender Kebab">
-</div>
+    <div class="dish">
+        <h3>Iskender Kebab</h3>
+        <p>Zarte Fleischscheiben, serviert mit Joghurt und Tomatensoße auf einem flachen Brot, übergossen mit heißer Butter. Sehr beliebt in Bursa.</p>
+        <img src="pics/iskenderKebap.jpeg" alt="Iskender Kebab" onclick="openModal(this)">
+    </div>
 
-<div class="dish">
-    <h3>İçli Köfte</h3>
-    <p>Ein köstliches Gericht aus Bulgur, das mit einer Mischung aus Hackfleisch, Zwiebeln, Gewürzen und Nüssen gefüllt wird. Diese werden frittiert oder im Wasser gekocht.</p>
-    <img src="pics/icliKofte.jpg" alt="İçli Köfte">
-</div>
+    <div class="dish">
+        <h3>İçli Köfte</h3>
+        <p>Ein köstliches Gericht aus Bulgur, das mit einer Mischung aus Hackfleisch, Zwiebeln, Gewürzen und Nüssen gefüllt wird. Diese werden frittiert oder im Wasser gekocht.</p>
+        <img src="pics/icliKofte.jpg" alt="İçli Köfte" onclick="openModal(this)">
+    </div>
 
-<div class="dish">
-    <h3>Kısır</h3>
-    <p>Ein erfrischender Bulgursalat mit frischen Kräutern, Tomaten, Gurken und einer Zitronen-Olivenöl-Vinaigrette. Variationen können Granatapfelsirup oder Joghurt enthalten.</p>
-    <img src="pics/kisir.jpg" alt="Kısır">
-</div>
+    <div class="dish">
+        <h3>Kısır</h3>
+        <p>Ein erfrischender Bulgursalat mit frischen Kräutern, Tomaten, Gurken und einer Zitronen-Olivenöl-Vinaigrette. Variationen können Granatapfelsirup oder Joghurt enthalten.</p>
+        <img src="pics/kisir.jpg" alt="Kısır" onclick="openModal(this)">
+    </div>
 
-<div class="dish">
-    <h3>Börek</h3>
-    <p>Ein Gebäck aus Yufka-Teig, das mit Käse, Hackfleisch, Spinat oder Kartoffeln gefüllt ist. Varianten wie "Su Böreği" oder "Sigara Böreği" existieren.</p>
-    <img src="pics/borek.jpeg" alt="Börek">
-</div>
+    <div class="dish">
+        <h3>Börek</h3>
+        <p>Ein Gebäck aus Yufka-Teig, das mit Käse, Hackfleisch, Spinat oder Kartoffeln gefüllt ist. Varianten wie "Su Böreği" oder "Sigara Böreği" existieren.</p>
+        <img src="pics/börek.jpeg" alt="Börek" onclick="openModal(this)">
+    </div>
 
-<div class="dish">
-    <h3>Kumpir</h3>
-    <p>Ein Gericht aus einer Ofenkartoffel, gefüllt mit einer Vielzahl von Zutaten wie Käse, Butter, Wurst, Mais, Oliven und verschiedenen Saucen.</p>
-    <img src="pics/kumpir.jpeg" alt="Kumpir">
-</div>
+    <div class="dish">
+        <h3>Kumpir</h3>
+        <p>Ein Gericht aus einer Ofenkartoffel, gefüllt mit einer Vielzahl von Zutaten wie Käse, Butter, Wurst, Mais, Oliven und verschiedenen Saucen.</p>
+        <img src="pics/kumpir.jpeg" alt="Kumpir" onclick="openModal(this)">
+    </div>
 
-<div class="dish">
-    <h3>Karnıyarık</h3>
-    <p>Gefüllte Auberginen mit einer Mischung aus Hackfleisch, Zwiebeln, Tomaten und Gewürzen, im Ofen gebacken.</p>
-    <img src="pics/karniyarik.jpg" alt="Karnıyarık">
-</div>
+    <div class="dish">
+        <h3>Karnıyarık</h3>
+        <p>Gefüllte Auberginen mit einer Mischung aus Hackfleisch, Zwiebeln, Tomaten und Gewürzen, im Ofen gebacken.</p>
+        <img src="pics/karniyarik.jpg" alt="Karnıyarık" onclick="openModal(this)">
+    </div>
 
-<div class="dish">
-    <h3>İmam Bayıldı</h3>
-    <p>Gefüllte Auberginen mit einer Mischung aus Zwiebeln, Knoblauch, Tomaten und Gewürzen. Unterschied zum Karnıyarık ist dass kein Fleisch drin ist, und dass es kalt serviert wird.</p>
-    <img src="pics/imam.jpg" alt="İmam Bayıldı">
-</div>
+    <div class="dish">
+        <h3>İmam Bayıldı</h3>
+        <p>Gefüllte Auberginen mit einer Mischung aus Zwiebeln, Knoblauch, Tomaten und Gewürzen. Unterschied zum Karnıyarık ist dass kein Fleisch drin ist, und dass es kalt serviert wird.</p>
+        <img src="pics/imam.jpg" alt="İmam Bayıldı" onclick="openModal(this)">
+    </div>
 
-<div class="dish">
-    <h3>Hünkar Beğendi</h3>
-    <p>Lammfleisch, das mit einer cremigen Auberginenpüree serviert wird. Die Auberginen werden gegrillt oder geröstet und dann püriert.</p>
-    <img src="pics/huenkarBegendi.jpg" alt="Hünkar Beğendi">
-</div>
-
-
-<div class="dish">
-    <h3>Kuru Fasulye Pilav</h3>
-    <p>Ein klassisches Gericht mit weißen Bohnen, in einer Tomatensauce gekocht, und serviert mit Reis.</p>
-    <img src="pics/kurufasulye.jpg" alt="Kuru Fasulye Pilav">
-</div>
-
-<div class="dish">
-    <h3>Mantı</h3>
-    <p>Kleine Teigtaschen, gefüllt mit Hackfleisch, serviert mit Joghurt und Paprikabutter oder Tomatensauce.</p>
-    <img src="pics/manti.jpg" alt="Mantı">
-</div>
-
-<div class="dish">
-    <h3>Dolma</h3>
-    <p>Gefüllte Gemüse, insbesondere Weinblätter, Auberginen, Paprikaarten, Zwiebel oder sogar Melonen. Die Füllung besteht aus Reis, Kräutern und Gewürzen.</p>
-    <img src="pics/dolma.jpg" alt="Dolma">
-</div>
+    <div class="dish">
+        <h3>Hünkar Beğendi</h3>
+        <p>Lammfleisch, das mit einer cremigen Auberginenpüree serviert wird. Die Auberginen werden gegrillt oder geröstet und dann püriert.</p>
+        <img src="pics/huenkarBegendi.jpg" alt="Hünkar Beğendi" onclick="openModal(this)">
+    </div>
 
 
-<h2 class="subtitle">Nachspeisen</h2>
+    <div class="dish">
+        <h3>Kuru Fasulye Pilav</h3>
+        <p>Ein klassisches Gericht mit weißen Bohnen, in einer Tomatensauce gekocht, und serviert mit Reis.</p>
+        <img src="pics/kurufasulyepilav.jpg" alt="Kuru Fasulye Pilav" onclick="openModal(this)">
+    </div>
 
-<div class="dessert">
-    <h3>Baklava</h3>
-    <p>Ein süßes Gebäck aus dünnen Teigblättern (Yufka), gefüllt mit gehackten Nüssen wie Walnüssen oder Pistazien, übergossen mit Zuckersirup.</p>
-        <p>• Pistazien-Baklava</p>
-        <p>• Walnuss-Baklava</p>
-    <img src="pics/baklava.jpg" alt="Baklava">
-</div>
+    <div class="dish">
+        <h3>Mantı</h3>
+        <p>Kleine Teigtaschen, gefüllt mit Hackfleisch, serviert mit Joghurt und Paprikabutter oder Tomatensauce.</p>
+        <img src="pics/turkManti.jpg" alt="Mantı" onclick="openModal(this)">
+    </div>
 
-<div class="dessert">
-    <h3>Aşure</h3>
-    <p>Ein süßes, cremiges Dessert aus Weizen, Kichererbsen, Datteln, Rosinen und Nüssen. Traditionell während des Monats Muharrem serviert.</p>
-    <p>Manchmal verfeinert mit Granatapfel, Zimt oder Kokosnuss.</p>
-    <img src="pics/Asure.jpg" alt="Aşure">
-</div>
-
-<div class="dessert">
-    <h3>Pişmaniye</h3>
-    <p>Eine zuckrige, faserige Süßigkeit, die wie Zuckerwatte aussieht, aber aus Zucker, Mehl, Butter und Vanille zubereitet wird.</p>
-        <p>• Mit Nüssen</p>
-        <p>• Mit Kakao</p>
-
-    <img src="pics/pismaniye.jpg" alt="Pişmaniye">
-</div>
-
-<div class="dessert">
-    <h3>Künefe</h3>
-    <p>Ein heißes Dessert aus feinen Fäden (Kadayıf), die mit geschmolzenem Käse gefüllt und goldbraun gebacken werden. Mit süßem Sirup übergossen und oft mit Pistazien garniert.</p>
-    <img src="pics/Kunefe.jpg" alt="Künefe">
-</div>
-
-<div class="dessert">
-    <h3>Sütlaç</h3>
-    <p>Türkischer Milchreis, der im Ofen gebacken wird, bis er eine karamellisierte Oberfläche bekommt. Traditionell mit Zimt oder Mandeln garniert.</p>
-    <img src="pics/sutlac.jpg" alt="Sütlaç">
-</div>
-
-<div class="dessert">
-    <h3>Lokum (Turkish Delight)</h3>
-    <p>Eine süße, gummiartige Süßigkeit aus Zucker, Stärke und Wasser, die oft mit Aromen wie Rosenwasser, Zitronen oder Pistazien verfeinert wird.</p>
-
-        <p>• Rosen-Lokum (mit Rosenwasser)</p>
-        <p>• Pistazien-Lokum (mit gehackten Pistazien)</p>
-        <p>• Zitronen-Lokum (mit Zitronenaroma)</p>
-        <p>• Klassischer Lokum (einfach süß und fruchtig)</p>
+    <div class="dish">
+        <h3>Dolma</h3>
+        <p>Gefüllte Gemüse, insbesondere Weinblätter, Auberginen, Paprikaarten, Zwiebel oder sogar Melonen. Die Füllung besteht aus Reis, Kräutern und Gewürzen.</p>
+        <img src="pics/dolma.jpg" alt="Dolma" onclick="openModal(this)">
+    </div>
 
 
-        <img src="pics/lokum1.jpeg" alt="Lokum">
-</div>
+    <h2 class="subtitle">Nachspeisen</h2>
+
+    <div class="dessert">
+        <h3>Baklava</h3>
+        <p>Ein süßes Gebäck aus dünnen Teigblättern (Yufka), gefüllt mit gehackten Nüssen wie Walnüssen oder Pistazien, übergossen mit Zuckersirup.</p>
+            <p>• Pistazien-Baklava</p>
+            <p>• Walnuss-Baklava</p>
+        <img src="pics/baklava.jpg" alt="Baklava" onclick="openModal(this)">
+    </div>
+
+    <div class="dessert">
+        <h3>Aşure</h3>
+        <p>Ein süßes, cremiges Dessert aus Weizen, Kichererbsen, Datteln, Rosinen und Nüssen. Traditionell während des Monats Muharrem serviert.</p>
+        <p>Manchmal verfeinert mit Granatapfel, Zimt oder Kokosnuss.</p>
+        <img src="pics/Asure.jpg" alt="Aşure" onclick="openModal(this)">
+    </div>
+
+    <div class="dessert">
+        <h3>Pişmaniye</h3>
+        <p>Eine zuckrige, faserige Süßigkeit, die wie Zuckerwatte aussieht, aber aus Zucker, Mehl, Butter und Vanille zubereitet wird.</p>
+            <p>• Mit Nüssen</p>
+            <p>• Mit Kakao</p>
+
+        <img src="pics/pismaniye.jpg" alt="Pişmaniye" onclick="openModal(this)">
+    </div>
+
+    <div class="dessert">
+        <h3>Künefe</h3>
+        <p>Ein heißes Dessert aus feinen Fäden (Kadayıf), die mit geschmolzenem Käse gefüllt und goldbraun gebacken werden. Mit süßem Sirup übergossen und oft mit Pistazien garniert.</p>
+        <img src="pics/Kunefe.jpg" alt="Künefe" onclick="openModal(this)">
+    </div>
+
+    <div class="dessert">
+        <h3>Sütlaç</h3>
+        <p>Türkischer Milchreis, der im Ofen gebacken wird, bis er eine karamellisierte Oberfläche bekommt. Traditionell mit Zimt oder Mandeln garniert.</p>
+        <img src="pics/sutlac.jpg" alt="Sütlaç" onclick="openModal(this)">
+    </div>
+
+    <div class="dessert">
+        <h3>Lokum (Turkish Delight)</h3>
+        <p>Eine süße, gummiartige Süßigkeit aus Zucker, Stärke und Wasser, die oft mit Aromen wie Rosenwasser, Zitronen oder Pistazien verfeinert wird.</p>
+
+            <p>• Rosen-Lokum (mit Rosenwasser)</p>
+            <p>• Pistazien-Lokum (mit gehackten Pistazien)</p>
+            <p>• Zitronen-Lokum (mit Zitronenaroma)</p>
+            <p>• Klassischer Lokum (einfach süß und fruchtig)</p>
 
 
-<footer>© 2025 Türkische Küche</footer>
+            <img src="pics/delight.jpg" alt="Lokum" onclick="openModal(this)">
+    </div>
+</section>
+
+<footer class="lead">© 2025 Türkische Küche. Alle Rechte vorbehalten</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-v9V7tVeXGVfapI0m8fyH9mXzAX9cdmBp3/cod+7r5pP0rbZcmLZnZbOwL7jQpOGG" crossorigin="anonymous"></script>
+
 </body>
 </html>

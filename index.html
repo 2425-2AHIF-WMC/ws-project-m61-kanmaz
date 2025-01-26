@@ -5,53 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Türkische Küche - Startseite</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ03Ruqb4V7h0p5p1b8dbh52dyfoMmcD34c5qT0ywz5joX6f6eScnXkp7tWV" crossorigin="anonymous">
 </head>
 <body>
 <header>
     <nav class="navbar">
-        <a href="index.html" class="nav-link active">Startseite</a>
-        <a href="regionen.html" class="nav-link">Regionen</a>
-        <a href="gerichte.html" class="nav-link">Gerichte</a>
-        <a href="kontakt.html" class="nav-link">Kontakt</a>
+        <div class="logo">
+            <a href="index.html">Türkische Küche</a>
+        </div>
+        <ul class="nav-link">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="regionen.html">Regionen</a></li>
+            <li><a href="gerichte.html">Gerichte</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
     </nav>
 </header>
 
 <!-- Hero Section -->
 <section class="hero">
-    <div class="hero-content">
-        <h1>Willkommen in der Welt der Türkischen Küche</h1>
+    <div class="hero-text">
+        <h1>Willkommen in der Welt der Türkischen Küche</h1> <br>
         <p>Entdecke die Vielfalt und den Geschmack der Türkei mit traditionellen und modernen Rezepten!</p>
-        <a href="gerichte.html" class="cta-button">Jetzt entdecken</a>
     </div>
+
+    <a href="gerichte.html" class="cta-button">Jetzt entdecken</a>
 </section>
 
 <!-- Highlights -->
 <section class="highlights">
-    <h2 class="section-title">Beliebte Gerichte</h2>
+    <h2 class="section-title">Bestmögliche Mahlzeit</h2>
     <div class="highlight-cards">
         <div class="highlight-card">
-            <img src="pics/adanaKebap.jpg" alt="Adana Kebab">
-            <h3>Adana Kebab</h3>
-            <p>Würzig und zart – der Kebab aus Adana, ein Genuss für alle Fleischliebhaber!</p>
+            <img src="pics/mercimek.jpg" alt="Mercimek Çorbası">
+            <h3>Mercimek Çorbası</h3>
+            <ul>
+                <li><strong>Warum?</strong> Eine wärmende, cremige Linsensuppe mit einem Hauch von Zitrone und Minzöl. Sie ist leicht, herzhaft und perfekt, um den Appetit anzuregen.</li>
+                <li><strong>Optionaler Begleiter:</strong>  Fladenbrot oder Pide.</li>
+            </ul>
+
+
         </div>
         <div class="highlight-card">
-            <img src="pics/baklava.jpg" alt="Baklava">
-            <h3>Baklava</h3>
-            <p>Die süßeste Versuchung der Türkei – Baklava mit Pistazien und Zuckersirup.</p>
+            <img src="pics/iskenderKebap.jpeg" alt="Iskender Kebap">
+            <h3>Iskender Kebap</h3>
+            <ul>
+                <li><strong>Warum?</strong> Der Star der türkischen Hauptgerichte. Saftiges Lamm- oder Rindfleisch, serviert auf knusprigem Brot, übergossen mit würziger Tomatensauce und einem Klecks Joghurt. Dazu etwas geschmolzene Butter – einfach unwiderstehlich.</li>
+                <li><strong>Optionaler Begleiter:</strong> Gegrilltes Gemüse oder Reis.</li>
+            </ul>
         </div>
         <div class="highlight-card">
-            <img src="pics/iskenderKebap.jpeg" alt="Iskender Kebab">
-            <h3>Iskender Kebab</h3>
-            <p>Zartes Fleisch auf frischem Brot, übergossen mit Joghurt und heißer Butter.</p>
+            <img src="pics/Kunefe.jpg" alt="Künefe">
+            <h3>Künefe</h3>
+            <ul>
+                <li><strong>Warum?</strong> Dieses Dessert verbindet knusprig gebackenes Kadaifi (Engelshaarteig) mit einer herzhaft-süßen Füllung aus Käse, gekrönt von Sirup und gehackten Pistazien. Es ist der perfekte süße Abschluss eines herzhaften Essens.</li>
+                <li><strong>Optionaler Begleiter:</strong> Türkischer Tee (Çay).</li>
+            </ul>
         </div>
     </div>
 </section>
 
 
 
-<footer>
-    <p>&copy; 2025 Türkische Küche | Alle Rechte vorbehalten</p>
+<footer class="lead">
+    2025 Türkische Küche | Alle Rechte vorbehalten
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-v9V7tVeXGVfapI0m8fyH9mXzAX9cdmBp3/cod+7r5pP0rbZcmLZnZbOwL7jQpOGG" crossorigin="anonymous"></script>
+
 </body>
 </html>
 
