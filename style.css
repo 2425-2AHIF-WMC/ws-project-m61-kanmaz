@@ -4,7 +4,6 @@ body {
     background-color: #f4f4f4; /* Warmer Hintergrundton */
     margin: 0;
     padding: 0;
-
 }
 
 
@@ -58,12 +57,14 @@ img {
     text-align: center;  /* Zentriert die Namen der Gerichte */
     color: black;
     font-family: 'Calibri', sans-serif;
+    font-size: 20px;
 }
 
 .dessert  {
      text-align: center;  /* Zentriert die Namen der Gerichte */
      color: black;
      font-family: 'Calibri', sans-serif;
+     font-size: 20px;
  }
 
 .title {
@@ -148,18 +149,11 @@ img {
     display: flex; /* Flexbox, um die Items nebeneinander anzuzeigen */
     justify-content: center; /* Zentriert die Links horizontal */
     align-items: center; /* Zentriert die Links vertikal */
-    padding: 10px 20px; /* Etwas Abstand um die Links */
     background-color: rgba(2, 2, 2, 0.62); /* Durchsichtiger Hintergrund */
     transition: background-color 0.3s, padding 0.3s; /* Sanfte Übergänge für den Hintergrund und das Padding */
     z-index: 1000; /* Damit die Navbar immer oben ist */
 }
 
-/* Dass alle Elemente nebeneinander sind*/
-.navbar ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-}
 
 /* Navbar Links */
 .navbar a {
@@ -174,6 +168,12 @@ img {
 
 
 
+/* Styling für den aktiven Link */
+.navbar .nav-link.active {
+    /*color: rgba(255, 185, 145, 0.8); /* Selbe Farben für die aktuelle Seite */
+    border-bottom: 2px solid #007bff; /* Unterstrich für die aktuelle Seite */
+}
+
 
 
 /* Hover-Effekt auf die Links */
@@ -185,15 +185,17 @@ img {
 /* Hintergrundfarbe der Navbar beim Scrollen */
 .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.88); /* Dunklerer Hintergrund */
-    transform: scale(1.05);
+    transform: scale(1.05); /* Vergrößert die Navbar um das 0.5-fache */
     transition: transform 1s, color 2s; /* Sanfte Übergänge */
 }
 
 /* Navbar Logo */
-.navbar .logo a {
+.navbar .logo {
     font-size: 24px; /* Größere Schrift für das Logo */
     font-weight: bold;
     color: white; /* Weiße Schriftfarbe */
+    margin-right: 190px; /* Damit das Logo weiter rechts ist */
+    margin-left: -350px; /* Damit das Logo weiter rechts ist */
 }
 
 /* Wenn die Seite gescrollt wird */
@@ -390,6 +392,7 @@ body.scrolled .navbar {
 
 
 .hero-text {
+    margin-top: 100px; /* Abstand nach oben */
     background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter schwarzer Hintergrund */
     padding: 20px;
     border-radius: 10px;
