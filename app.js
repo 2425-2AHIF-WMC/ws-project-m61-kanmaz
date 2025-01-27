@@ -8,6 +8,18 @@ window.onscroll = function() {
     }
 };
 
+// Aktuelle URL abrufen
+const currentPage = window.location.pathname;
+
+// Alle Links mit der Klasse "nav-links" durchgehen
+document.querySelectorAll('.nav-link').forEach(link => {
+    // Prüfen, ob der href des Links zur aktuellen Seite passt
+    if (link.href.includes(currentPage)) {
+        link.classList.add('active'); // Aktive Klasse hinzufügen
+    }
+});
+
+
 
 // Funktion, die die Telefonnummer in die Zwischenablage kopiert
 function copyPhoneNumber() {
@@ -60,6 +72,3 @@ document.querySelectorAll('.region').forEach(region => {
         region.classList.toggle('flipped');
     });
 });
-
-
-

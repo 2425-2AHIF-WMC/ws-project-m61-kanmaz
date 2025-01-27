@@ -173,6 +173,9 @@ img {
 }
 
 
+
+
+
 /* Hover-Effekt auf die Links */
 .navbar a:hover {
     color: #f39c12; /* Ändert die Farbe beim Hover */
@@ -182,7 +185,8 @@ img {
 /* Hintergrundfarbe der Navbar beim Scrollen */
 .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.88); /* Dunklerer Hintergrund */
-    padding: 10px 50px; /* Mehr Padding, wenn die Navbar gescrollt wird */
+    transform: scale(1.05);
+    transition: transform 1s, color 2s; /* Sanfte Übergänge */
 }
 
 /* Navbar Logo */
@@ -292,7 +296,7 @@ body.scrolled .navbar {
 .region {
     width: 300px; /* Breite der Region */
     height: 250px; /* Höhe der Region */
-    background-color: #f0f0f0; /* Hintergrundfarbe der Region */
+    background-color: rgb(168, 3, 3); /* Hintergrundfarbe der Region */
     border-radius: 12px; /* Abgerundete Ecken */
     position: relative; /* Für absolute Positionierung der Vorder- und Rückseite */
     cursor: pointer; /* Zeigt den Hand-Cursor, wenn der Benutzer drüber fährt */
@@ -306,6 +310,7 @@ body.scrolled .navbar {
 /* Vorderseite der Region */
 .region-front,
 .region-back {
+    font-family: 'Montserrat', sans-serif;
     position: absolute; /* Positioniert die Vorder- und Rückseite */
     width: 100%; /* Deckt die komplette Breite ab */
     height: 100%; /* Deckt die komplette Höhe ab */
@@ -317,19 +322,27 @@ body.scrolled .navbar {
     display: flex; /* Flexbox, um Inhalte zu zentrieren */
     justify-content: center; /* Zentriert horizontal */
     align-items: center; /* Zentriert vertikal */
-    background-color: #f0f0f0; /* Hintergrundfarbe */
+    background-color: #c7cbd5; /* Hintergrundfarbe */
     transition: transform 0.4s, opacity 0.4s; /* Übergang für Bewegungen und Sichtbarkeit */
     overflow: hidden; /* Verhindert, dass Inhalte über den Rand hinausragen */
+    border-radius: 1rem;
 }
+
+.region-front img {
+    max-width: 150px; /* Bildbreite auf 80% der Rückseite setzen */
+    border-radius: 8px; /* Abgerundete Ecken des Bildes */
+}
+
 
 /* Titel auf der Vorderseite */
 .region-title {
-    opacity: 0; /* Anfangs unsichtbar */
+    opacity: 1; /* Anfangs unsichtbar */
     font-size: 1.5rem; /* Schriftgröße */
     font-weight: bold; /* Fettschrift */
     color: #333; /* Textfarbe */
     transition: opacity 0.3s ease; /* Übergang für die Sichtbarkeit */
 }
+
 
 /* Wenn der Benutzer über die Vorderseite hovert, wird der Titel sichtbar */
 .region:hover .region-title {
@@ -338,6 +351,7 @@ body.scrolled .navbar {
 
 /* Rückseite der Region */
 .region-back {
+    font-size: 20px ;
     transform: rotateY(180deg); /* Dreht die Rückseite um 180 Grad */
     display: flex; /* Flexbox für die Anordnung der Elemente auf der Rückseite */
     flex-direction: column; /* Vertikale Anordnung der Inhalte */
@@ -347,6 +361,7 @@ body.scrolled .navbar {
     padding: 15px; /* Abstand zum Rand */
     background-color: #fff; /* Hintergrundfarbe */
     box-sizing: border-box; /* Verhindert das Überschreiten der Box durch Padding */
+    border-radius: 1rem; /* Abgerundete Ecken */
 }
 
 /* Wenn der Benutzer über die Vorderseite hovert, wird die Rückseite sichtbar */
