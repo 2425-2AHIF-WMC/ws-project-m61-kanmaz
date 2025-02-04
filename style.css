@@ -218,8 +218,9 @@ body.scrolled .navbar {
 
 .navbar a:hover::after {
     width: 100%; /* Der Strich wächst beim Hover */
-    transform: scale(1.1); /* Vergrößert den Link leicht */
+    /*transform: scale(1.1); /* Vergrößert den Link leicht */
 }
+
 
 
 /* Hero Section */

@@ -8,24 +8,11 @@ window.onscroll = function() {
     }
 };
 
-// Aktuelle URL abrufen
-const currentPage = window.location.pathname;
-
-// Alle Links mit der Klasse "nav-links" durchgehen
-document.querySelectorAll('.nav-link').forEach(link => {
-    // Prüfen, ob der href des Links zur aktuellen Seite passt
-    if (link.href.includes(currentPage)) {
-        link.classList.add('active'); // Aktive Klasse hinzufügen
-    }
-});
-
-
-
 // Funktion, die die Telefonnummer in die Zwischenablage kopiert
 function copyPhoneNumber() {
     var phoneNumber = document.getElementById("phone-number").textContent; // Holt die Telefonnummer mit der ID 'phone-number'
     navigator.clipboard.writeText(phoneNumber).then(function() { // Kopiert den Text in die Zwischenablage
-        alert("Telefonnummer wurde kopiert!"); // Zeigt eine Erfolgsmeldung an
+        alert("Telefonnummer wurde kopiert!"); // Zeigt eine Erfolgsmeldung an-
     });
 }
 
@@ -44,8 +31,6 @@ function copyAddress() {
         alert("Adresse wurde kopiert!"); // Zeigt eine Erfolgsmeldung an
     });
 }
-
-
 
 // Funktion zum Öffnen des Modals
 function openModal(img) {
